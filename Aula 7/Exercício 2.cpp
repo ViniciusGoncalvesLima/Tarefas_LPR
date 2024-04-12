@@ -1,91 +1,73 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void exe1() {
     
-cout << "using System;" << endl;
-cout << "class HelloWorld {" << endl;
-cout << "static void Main() {" << endl;
+int contador = 0, acumulador = 0;
 
-cout << "int contador = 0, acumulador = 0;" << endl;
+cout << "Quantos números serão fornecidos?" << endl;
+int quant;
+cin >> quant;
 
-cout << "Console.WriteLine('Quantos números serão fornecidos?');" << endl;
-cout << "int quant = int.Parse(Console.ReadLine());" << endl;
-cout << "int contagem = quant;" << endl;
+int contagem = quant;
 
-cout << "while (contagem > 0) {" << endl;
+while (contagem > 0) {
 
-cout << "Console.WriteLine('Insira um número para adicionar à média: ');" << endl;
-cout << "contador = int.Parse(Console.ReadLine());" << endl;
+cout << "Insira um número para adicionar à média: " << endl;
+cin >> contador;
 
-cout << "if(contador%2 == 0) {" << endl;
-cout << "acumulador += contador;" << endl;
-cout << "}" << endl;
+if(contador%2 == 0) {
+acumulador += contador;
+}
 
-cout << "contagem--;" << endl;
+contagem--;
 
-cout << "}" << endl;
+}
 
-cout << "double media = acumulador / quant;" << endl;
-cout << "Console.WriteLine($'{media},{acumulador},{quant}');" << endl;
-cout << "Console.WriteLine($'A média dos {quant} números é: {media}');" << endl;
-
-cout << "}" << endl;
-cout << "}" << endl;
+double media = acumulador / quant;
+cout << "A média dos " << quant << " números é: " << media << endl;;
     
 }
 
 void exe3() {
     
-cout << "#include <iostream>" << endl;
-cout << "using namespace std;" << endl;
-
-cout << "int main()" << endl;
-cout << "{" << endl;
-cout << "    int resultado;" << endl;
-cout << "    const int max = 500;" << endl;
+    int resultado;
+    const int max = 500;
     
-cout << "    for (int num_select = 50; num_select<=max; num_select++) {" << endl;
+    for (int num_select = 50; num_select<=max; num_select++) {
         
-cout << "        if (num_select%3 == 0) {" << endl;
+        if (num_select%3 == 0) {
             
-cout << "            if (num_select%2 == 1) {" << endl;
+            if (num_select%2 == 1) {
                 
-cout << "                resultado += num_select;" << endl;
-cout << "            }" << endl;
-cout << "        }" << endl;
+                resultado += num_select;
+            }
+        }
         
-cout << "    }" << endl;
+    }
     
-cout << "    cout << 'A soma de todos os números ímpares múltiplos de 3 que se encontrem no conjunto dos números de 50 a 500 é: ' << resultado << endl;" << endl;
-cout << "    return 0;" << endl;
-cout << "}" << endl;
+    cout << "A soma de todos os números ímpares múltiplos de 3 que se encontrem no conjunto dos números de 50 a 500 é: " << resultado << endl;
     
 }
 
 void exe4() {
     
-cout << "using System;" << endl;
-cout << "class HelloWorld {" << endl;
-cout << "  static void Main() {" << endl;
+    int num;
+    cout << "Insira um número: " << endl;
+    cin >> num;
+    int somador = 0;
     
-cout << "    Console.WriteLine('Insira um número: ');" << endl;
-cout << "    int num = int.Parse(Console.ReadLine());" << endl;
-cout << "    int somador = 0;" << endl;
+    string digitos = to_string(num * num);
     
-cout << "    string digitos = (num * num).ToString();" << endl;
-    
-cout << "    for (int i = 0; i<digitos.Length; i++) {" << endl;
+    for (int i = 0; i<digitos.length(); i++) {
         
-cout << "        int digito = int.Parse(digitos[i].ToString());" << endl;
-cout << "        somador += digito;" << endl;
+        int digito = digitos[i] - '0';
+        somador += digito;
         
-cout << "    }" << endl;
+    }
     
-cout << "    Console.WriteLine($'A soma dos dígitos do quadrado desse número é: {somador}');" << endl;
-    
-cout << "  }" << endl;
-cout << "}" << endl;
+    cout << "A soma dos dígitos do quadrado desse número é: " << somador << endl;
     
 }
 
