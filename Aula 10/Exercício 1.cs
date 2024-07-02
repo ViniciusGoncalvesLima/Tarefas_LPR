@@ -31,30 +31,40 @@ class HelloWorld {
         foreach(string nome in nomes) {
         
         tamanho = nome.Length;
-        if(tamanho < tamanhoant){
-            nomesOrdem.Insert(nome)
+        if(tamanho >= tamanhoant){
+            nomesOrdem.Add(nome);
+        } else {
+            
+            for(int i=0; i<=nomesOrdem.Count; i++) {
+                
+                if(tamanho<nomesOrdem[i].Length) {
+                    
+                    nomesOrdem.Insert(i, nome);
+                    
+                }
+                
+            }
+            
         }
         tamanhoant = tamanho;
         nomes.Remove(nome);
         
         }
     }
-    
-    
-    while(nomes.Count != 0) {
         
-        foreach(string nome in nomes) {
+        foreach(string nome in nomesOrdem) {
         
         tamanho = nome.Length;
-        if(tamanho != tamanhoant){
-        Console.Write(nome);
-        }
+        do{
+            
+            Console.Write($"{nome}");
+            
+        } while(tamanho==tamanhoant);
         tamanhoant = tamanho;
         nomes.Remove(nome);
         
         }
         Console.WriteLine("");
-    }
     
   }
 }
