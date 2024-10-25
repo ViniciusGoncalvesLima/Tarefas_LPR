@@ -6,10 +6,13 @@ class HelloWorld {
     
     List <string> nomes = new List<string>();
     List <string> nomesOrdem = new List<string>();
+    List <string> nomesRemovidos = new List<string>();
     
     Console.WriteLine("Quanto nomes serão inseridos?");
-    uint quant = uint.Parse(Console.ReadLine());
+    int quant = int.Parse(Console.ReadLine());
     Console.Write("Insira um nome: ");
+    
+    int maior = 0;
     
     for(int i=0; i<quant; i++) {
         
@@ -22,49 +25,57 @@ class HelloWorld {
         string anem = Console.ReadLine();
         nomes.Add(anem);
         
+        if(anem.Length > maior) {
+            
+            maior = anem.Length;
+            
+        }
+        
     }
     
-    int tamanho, tamanhoant = 0;
-    
-    while(nomes.Count != 0) {
-        
-        foreach(string nome in nomes) {
-        
-        tamanho = nome.Length;
-        if(tamanho >= tamanhoant){
-            nomesOrdem.Add(nome);
-        } else {
+    int tamanhoant = 0;
             
-            for(int i=0; i<=nomesOrdem.Count; i++) {
+            for(int j=1; j<=maior; j++) {
                 
-                if(tamanho<nomesOrdem[i].Length) {
+                for(int i=0; i<quant; i++) {
+                
+                    if(j==nomes[i].Length) {
+                        
+                        nomesOrdem.Add(nomes[i]);
+                        
+                    }
                     
-                    nomesOrdem.Insert(i, nome);
-                    
+                    if(nomesOrdem.Count == quant) {
+                        break;
+                    }
                 }
                 
             }
             
-        }
-        tamanhoant = tamanho;
-        nomes.Remove(nome);
+            int total = quant;
         
-        }
-    }
-        
-        foreach(string nome in nomesOrdem) {
-        
-        tamanho = nome.Length;
-        do{
+        while (total != 0) {
             
-            Console.Write($"{nome}");
+            foreach(string nome in nomesOrdem) {
+            if (nome.Length!=tamanhoant) {
+                Console.Write($"{nome}, ");
+                total--;
+                nomesRemovidos.Add(nome);
+            }
             
-        } while(tamanho==tamanhoant);
-        tamanhoant = tamanho;
-        nomes.Remove(nome);
-        
+            tamanhoant = nome.Length;
+            
+            }
+            Console.WriteLine("");
+            tamanhoant = 0;
+            
+            foreach(string tiranome in nomesRemovidos) {
+                
+                nomesOrdem.Remove(tiranome);
+                
+            }
+            
         }
-        Console.WriteLine("");
     
   }
 }
