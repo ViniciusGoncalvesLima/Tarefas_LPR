@@ -1,0 +1,7 @@
+C:\Users\PICHAU\Documents\GitHub\Tarefas_LPR\Aula 11\Exercício 3\Aula 11\Aula 11\obj\Debug\Aula 11.csproj.AssemblyReference.cache
+C:\Users\PICHAU\Documents\GitHub\Tarefas_LPR\Aula 11\Exercício 3\Aula 11\Aula 11\obj\Debug\Aula 11.csproj.CoreCompileInputs.cache
+C:\Users\PICHAU\Documents\GitHub\Tarefas_LPR\Aula 11\Exercício 3\Aula 11\Aula 11\bin\Debug\Aula 11.exe.config
+C:\Users\PICHAU\Documents\GitHub\Tarefas_LPR\Aula 11\Exercício 3\Aula 11\Aula 11\bin\Debug\Aula 11.exe
+C:\Users\PICHAU\Documents\GitHub\Tarefas_LPR\Aula 11\Exercício 3\Aula 11\Aula 11\bin\Debug\Aula 11.pdb
+C:\Users\PICHAU\Documents\GitHub\Tarefas_LPR\Aula 11\Exercício 3\Aula 11\Aula 11\obj\Debug\Aula 11.exe
+C:\Users\PICHAU\Documents\GitHub\Tarefas_LPR\Aula 11\Exercício 3\Aula 11\Aula 11\obj\Debug\Aula 11.pdb

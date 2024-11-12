@@ -11,19 +11,21 @@ namespace Aula_11
         public string matricula, nome;
         public float prova1, prova2, trabalho, media, final;
 
-        public float calcMedia()
+        public void calcMedia()
         {
-            media = (prova1 + prova2) * 5 + trabalho * 4;
+            media = ((prova1 + prova2) * 5 + trabalho * 4)/14;
         }
 
-        public float calcFinal()
+        public void calcFinal()
         {
             if (media < 60)
             {
                 final = 60 - media;
+                Console.WriteLine($"O aluno precisa de {final} pontos na prova final");
             } else
             {
-                return 0;
+                final = 0;
+                Console.WriteLine("O aluno não precisa fazer final");
             }
         }
     }
